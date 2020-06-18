@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/ui-react": "^0.2.8",
-    "aws-amplify": "^3.0.16",
+    "aws-amplify": "^3.0.17",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
