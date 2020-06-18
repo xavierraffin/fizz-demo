@@ -31,6 +31,6 @@ export const strings = {
         [Translations.RESET_PASSWORD_TEXT]: 'Reset password FR',
         [Translations.PASSWORD_LABEL]: 'Password * FR',
         [Translations.PASSWORD_PLACEHOLDER]: 'Enter your password FR',
-        [Translations.PHONE_LABEL]: 'Phone Number *',
+        [Translations.PHONE_LABEL]: 'Phone Number * FR',
     },
 };

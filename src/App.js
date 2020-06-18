@@ -40,31 +40,37 @@ class App extends React.Component {
   render = () => (
     <div>
       <AmplifyButton onClick={this.toggleLang}>langue {this.state.lang}</AmplifyButton>
-      <AmplifyAuthenticator usernameAlias="email">
-        <AmplifySelectMfaType MFATypes={MFATypeOptions}></AmplifySelectMfaType>
-        <AmplifySignIn
-          usernameAlias="email"
-          headerText={I18n.get("signInHeader")}
-          slot="sign-in"
-        ></AmplifySignIn>
-        <AmplifySignUp
-          usernameAlias="email"
-          headerText={I18n.get("signUpHeader")}
-          slot="sign-up"
-        ></AmplifySignUp>
-        <AmplifyForgotPassword
-          usernameAlias="email"
-          headerText={I18n.get("forgotPasswordHeader")}
-          slot="forgot-password"
-        ></AmplifyForgotPassword>
-        <div>
-          {/* This is not really private, you should instead use the credential to load something dynamically from the backend */}
+      <div style={styles.container}>
+        <AmplifyAuthenticator usernameAlias="email">
+          <AmplifySelectMfaType MFATypes={MFATypeOptions}></AmplifySelectMfaType>
+          <AmplifySignIn
+            usernameAlias="email"
+            headerText={I18n.get("signInHeader")}
+            slot="sign-in"
+          ></AmplifySignIn>
+          <AmplifySignUp
+            usernameAlias="email"
+            headerText={I18n.get("signUpHeader")}
+            slot="sign-up"
+          ></AmplifySignUp>
+          <AmplifyForgotPassword
+            usernameAlias="email"
+            headerText={I18n.get("forgotPasswordHeader")}
+            slot="forgot-password"
+          ></AmplifyForgotPassword>
+          <div>
+            {/* This is not really private, you should instead use the credential to load something dynamically from the backend */}
             Private Content
           <AmplifySignOut />
-        </div>
-      </AmplifyAuthenticator>
+          </div>
+        </AmplifyAuthenticator>
+      </div>
     </div>
   );
+}
+
+const styles = {
+  container: { width: 400, margin: '0 auto', display: 'flex', flex: 1, flexDirection: 'column', justifyContent: 'center', padding: 0 },
 }
 
 export default App;
