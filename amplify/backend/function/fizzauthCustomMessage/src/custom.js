@@ -1,5 +1,4 @@
 exports.handler = (event, context, callback) => {
-    
     // Identify why was this function invoked
     if (event.triggerSource === "CustomMessage_SignUp") {
         let lang = event.request.userAttributes["custom:lang"]
@@ -19,9 +18,6 @@ exports.handler = (event, context, callback) => {
         }
     }
     // Create custom message for other events
-
-    // Customize messages for other user pools
-
-    // Return to Amazon Cognito
-    callback(null, event);
+  // Return to Amazon Cognito
+  callback(null, event);
 };

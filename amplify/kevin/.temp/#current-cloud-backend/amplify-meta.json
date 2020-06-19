@@ -1,0 +1,15 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fizz-kevin-141921-authRole",
+            "UnauthRoleArn": "arn:aws:iam::111989064546:role/amplify-fizz-kevin-141921-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::111989064546:role/amplify-fizz-kevin-141921-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-fizz-kevin-141921-deployment",
+            "UnauthRoleName": "amplify-fizz-kevin-141921-unauthRole",
+            "StackName": "amplify-fizz-kevin-141921",
+            "StackId": "arn:aws:cloudformation:us-west-2:111989064546:stack/amplify-fizz-kevin-141921/6302d1e0-b1a9-11ea-8f57-06ca8b36c6d4",
+            "AmplifyAppId": "d3nbdb5txrv7lr"
+        }
+    }
+}

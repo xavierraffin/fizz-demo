@@ -9,6 +9,18 @@ Parameters:
     Type: String
   
   
+  
+  
+  functionfizzauthCustomMessageArn: 
+    Type: String
+    Default: functionfizzauthCustomMessageArn
+  
+  functionfizzauthCustomMessageName: 
+    Type: String
+    Default: functionfizzauthCustomMessageName
+  
+  
+  
 
     
   resourceNameTruncated:
@@ -52,10 +64,10 @@ Parameters:
         
   userpoolClientGenerateSecret:
     Type: String
-                
+            
   userpoolClientRefreshTokenValidity:
-    Type: Number
-                  
+    Type: String
+                      
   userpoolClientWriteAttributes:
     Type: CommaDelimitedList
               
@@ -94,7 +106,7 @@ Parameters:
                     
   userPoolGroupList:
     Type: CommaDelimitedList
-                                                
+                                    
   parentStack:
     Type: String
                 
@@ -103,7 +115,7 @@ Parameters:
               
   dependsOn:
     Type: CommaDelimitedList
-    
+                
 Conditions:
   ShouldNotCreateEnvResources: !Equals [ !Ref env, NONE ]
 
@@ -115,7 +127,7 @@ Resources:
   # Created to allow the UserPool SMS Config to publish via the Simple Notification Service during MFA Process
     Type: AWS::IAM::Role
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, 'fizzaue6c0c3e3_sns-role', !Join ['',[ 'sns', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, 'fizzaue6c0c3e3_sns-role', !Join ['',[ 'sns', 'undefined', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument: 
         Version: "2012-10-17"
         Statement: 
@@ -162,6 +174,19 @@ Resources:
         
       
       
+      LambdaConfig:
+        
+        
+          CustomMessage: !Ref functionfizzauthCustomMessageArn
+        
+        
+        
+        
+        
+        
+        
+        
+      
       
       AutoVerifiedAttributes: !Ref autoVerifiedAttributes
       
@@ -189,6 +214,15 @@ Resources:
     
   
     
+  
+  UserPoolCustomMessageLambdaInvokePermission: 
+    Type: "AWS::Lambda::Permission"
+    DependsOn: UserPool
+    Properties: 
+      Action: "lambda:invokeFunction"
+      Principal: "cognito-idp.amazonaws.com"
+      FunctionName: !Ref functionfizzauthCustomMessageName
+      SourceArn: !GetAtt UserPool.Arn
     
   
     
@@ -226,7 +260,7 @@ Resources:
   # Created to execute Lambda which gets userpool app client config values
     Type: 'AWS::IAM::Role'
     Properties:
-      RoleName: !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',['upClientLambdaRole', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
+      RoleName: !If [ShouldNotCreateEnvResources, !Ref userpoolClientLambdaRole, !Join ['',['upClientLambdaRole', 'undefined', !Select [3, !Split ['-', !Ref 'AWS::StackName']], '-', !Ref env]]]
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
