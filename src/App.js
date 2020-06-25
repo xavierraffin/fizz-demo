@@ -84,6 +84,10 @@ class App extends React.Component {
               label: I18n.get("phoneNumberLabel"),
               placeholder: I18n.get("phoneNumberPlaceHolder"),
               required: false,
+            },
+            {
+              type: "hidden",
+              value: navigator.language,
             }
           ]}></AmplifySignUp>
         <div>
