@@ -3,7 +3,7 @@ exports.handler = (event, context, callback) => {
     if (event.userPoolId === "us-west-2_64AAJLQGz") { 
         // Identify why was this function invoked
         if (event.triggerSource === "CustomMessage_SignUp") {
-            let lang = event.request.userAttributes["locale"]
+            let lang = event.request.userAttributes["custom:lang"]
             console.log("Lang is " + lang);
 
 

@@ -118,8 +118,8 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-fizz-fizzenv-00354-deployment",
-					"S3Key": "amplify-builds/fizzauthCustomMessage-2b4b617a66487a563130-build.zip"
+					"S3Bucket": "amplify-fizz-amp-145439-deployment",
+					"S3Key": "amplify-builds/fizzauthCustomMessage-5241775146726f595042-build.zip"
 				}
 			}
 		},
