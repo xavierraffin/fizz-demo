@@ -3,13 +3,13 @@
     "modules": [
         "custom"
     ],
-    "parentResource": "fizzauth",
-    "functionName": "fizzauthCustomMessage",
-    "resourceName": "fizzauthCustomMessage",
+    "parentResource": "ampidenpool",
+    "functionName": "ampidenpoolCustomMessage",
+    "resourceName": "ampidenpoolCustomMessage",
     "parentStack": "auth",
     "triggerEnvs": [],
     "triggerDir": "/usr/local/lib/node_modules/@aws-amplify/cli/node_modules/amplify-category-auth/provider-utils/awscloudformation/utils/../triggers/CustomMessage",
     "triggerTemplate": "CustomMessage.json.ejs",
-    "roleName": "fizzauthCustomMessage",
+    "roleName": "ampidenpoolCustomMessage",
     "skipEdit": true
 }

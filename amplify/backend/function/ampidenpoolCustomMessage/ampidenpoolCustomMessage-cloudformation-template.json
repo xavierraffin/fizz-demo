@@ -69,12 +69,12 @@
 				"FunctionName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"fizzauthCustomMessage",
+						"ampidenpoolCustomMessage",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"fizzauthCustomMessage",
+									"ampidenpoolCustomMessage",
 									"-",
 									{
 										"Ref": "env"
@@ -118,8 +118,8 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "amplify-fizz-fizzenv-00354-deployment",
-					"S3Key": "amplify-builds/fizzauthCustomMessage-2b4b617a66487a563130-build.zip"
+					"S3Bucket": "amplify-fizz-ampiden-220731-deployment",
+					"S3Key": "amplify-builds/ampidenpoolCustomMessage-684561312b6e2b434649-build.zip"
 				}
 			}
 		},
@@ -129,12 +129,12 @@
 				"RoleName": {
 					"Fn::If": [
 						"ShouldNotCreateEnvResources",
-						"fizzauthCustomMessage",
+						"ampidenpoolCustomMessage",
 						{
 							"Fn::Join": [
 								"",
 								[
-									"fizzauthCustomMessage",
+									"ampidenpoolCustomMessage",
 									"-",
 									{
 										"Ref": "env"
