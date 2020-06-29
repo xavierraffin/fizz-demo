@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/authorize",
+            "lambdaFunction": "authorizeFunction",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "authorizeAPI",
+    "apiName": "authorizeAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "authorizeFunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-fizz-liamawsdev-100000-authRole",
+        "unAuthRoleName": "amplify-fizz-liamawsdev-100000-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "authorizeFunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
