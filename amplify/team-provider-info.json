@@ -16,5 +16,23 @@
                 "fizzauth": {}
             }
         }
+    },
+    "liamawsdev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fizz-liamawsdev-100000-authRole",
+            "UnauthRoleArn": "arn:aws:iam::386310383721:role/amplify-fizz-liamawsdev-100000-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::386310383721:role/amplify-fizz-liamawsdev-100000-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-fizz-liamawsdev-100000-deployment",
+            "UnauthRoleName": "amplify-fizz-liamawsdev-100000-unauthRole",
+            "StackName": "amplify-fizz-liamawsdev-100000",
+            "StackId": "arn:aws:cloudformation:us-east-1:386310383721:stack/amplify-fizz-liamawsdev-100000/d4450e80-ba10-11ea-979e-0ee829539650",
+            "AmplifyAppId": "d10qltg8l6vm93"
+        },
+        "categories": {
+            "auth": {
+                "fizzauth": {}
+            }
+        }
     }
 }
