@@ -102,7 +102,7 @@
 
 1. Scroll all the way to the bottom and click add custom attribute.
    Enter `lang` under the Name and keep the other fields default, then click save changes.
-   ![](Images/Attribute.png)
+   ![](Images/Attributes.png)
 
 1. We now need to connect your frontend with your backend now by passing the lambda the lang attrubite data.
    Please open the file App.js that runs your react frontend. To get to this file it is localed in the rootproject/src/App.js .
