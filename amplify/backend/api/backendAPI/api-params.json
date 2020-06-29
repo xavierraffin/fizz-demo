@@ -8,8 +8,8 @@
             }
         }
     ],
-    "resourceName": "authorizeAPI",
-    "apiName": "authorizeAPI",
+    "resourceName": "backendAPI",
+    "apiName": "backendAPI",
     "functionArns": [
         {
             "lambdaFunction": "authorizeFunction"

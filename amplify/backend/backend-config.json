@@ -20,7 +20,7 @@
 		}
 	},
 	"api": {
-		"authorizeAPI": {
+		"backendAPI": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
