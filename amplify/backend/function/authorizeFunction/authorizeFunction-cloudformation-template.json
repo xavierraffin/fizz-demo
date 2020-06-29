@@ -68,7 +68,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-fizz-liamawsdev-100000-deployment",
-					"S3Key": "amplify-builds/authorizeFunction-6b476352386443443150-build.zip"
+					"S3Key": "amplify-builds/authorizeFunction-69753736346b77673134-build.zip"
 				}
 			}
 		},
