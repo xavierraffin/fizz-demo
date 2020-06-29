@@ -107,6 +107,7 @@
 
 
 1. We only need to add lang as a custom attribute in the form field:
+
     ``` <AmplifySignUp 
             // Issue with auto populate and hidden: https://github.com/aws-amplify/amplify-js/issues/6168
             usernameAlias="email"
@@ -153,7 +154,9 @@
                 required: true,
               },
             ]}></AmplifySignUp>```
-    Now click save and start your React app and it should have worked. You have succeful add internationaltion to your verfication email base on the langage selected by the toggle button.
+
+1. Now click save and start your React app and it should have worked. You have succeful add internationaltion to your verfication email base on the langage selected by the toggle button.
+
 ## How to create a login button/link and redirect from authenticated page when no JWT token provided
 ## How to create a logout link
 ## How to create a signup link
