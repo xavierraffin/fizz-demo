@@ -24,17 +24,7 @@ class App extends React.Component {
     super(props, context);
     this.state = { lang: "en" };
   }
-   //old toggle
-  /*toggleLang = () => {
-    console.log(this);
-    if (this.state.lang === "en") {
-      I18n.setLanguage("fr");
-      this.setState({ lang: "fr" });
-    } else {
-      I18n.setLanguage("en");
-      this.setState({ lang: "en" });
-    }
-  }*/
+
 // New toggle with more languages 
   toggleLang = () => {
     console.log(this);
@@ -55,7 +45,7 @@ class App extends React.Component {
         I18n.setLanguage("vn");
         this.setState({ lang: "vn" });
         break;
-      case "vi": //Vietnamese
+      case "vn": //Vietnamese
         I18n.setLanguage("en");
         this.setState({ lang: "en" });
         break;
