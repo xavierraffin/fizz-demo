@@ -2,11 +2,10 @@
 ## How to create a custom message lambda trigger for Cognitio
 1. You need to setup your Ampilify Authentication by running the command `amplify add auth` in the terminal.
     If you already have the authentication api setup you need to remove it and start over, please run the command `amplify auth remove` in the terminal.
-    In order to make this trigger succssful we need to make sure that we enable all 3 user attrubites and a custom addtrubie, which can only be set at the time of intial creatation. 
+    In order to make this trigger succssful we need to make sure that we enable all 3 user attributes and a custom attribute, which can only be set at the time of initial creation. 
 
 1. Once the authentication api setup menu has appeared please follow the selection guide below:
 
-    ```your user@a483e743386a fizz-demo % amplify add auth
         Using service: Cognito, provided by: awscloudformation
         
         The current configured provider is Amazon Cognito. 
@@ -39,11 +38,11 @@
         Successfully added the Lambda function locally
         ? Do you want to edit your custom function now? Yes
         Please edit the file in your editor: /Users/kevnvo/Documents/Amp_Broker/fizz-demo/amplify/backend/function/fizzdemoCustomMessage/src/custom.js
-        ? Press enter to continue ```
+        ? Press enter to continue 
 
 1. Once the your text editor has appeared please copy and paste this code into the lamada function:
 
-        ```exports.handler = (event, context, callback) => {
+            exports.handler = (event, context, callback) => {
             console.log(event);
             // Identify why was this function invoked
             if (event.triggerSource === "CustomMessage_SignUp") {
@@ -87,20 +86,21 @@
 
         // Return to Amazon Cognito
         callback(null, event);
-        };```
+        };
+
         You can add or remove languages as many languages as you want by add and removing else if conditions.
         Now save the code and press enter on the terminal to finish the process.
 
 1. Now enter `amplify push` to create your resources on the cloud, this step may take a bit of time.
 
-1. Once the resource have been created, please open your AWS console and sign in with the assoicated account.
+1. Once the resource have been created, please open your AWS console and sign in with the associated account.
    Go to the Cognitio`s service page and click Manage User Pools 
    Now click on the user pool we have just created from the name we gave it in ther pervious steps.
    Under General settings click on Attributes in the left menu bar.
 
 
 1. Scroll all the way to the bottom and click add custom attribute.
-   Enter lang under the Name and keep the other fields default, then click save changes.
+   Enter `lang` under the Name and keep the other fields default, then click save changes.
 
 1. We now need to connect your frontend with your backend now by passing the lambda the lang attrubite data.
    Please open the file App.js that runs your react frontend. To get to this file it is localed in the rootproject/src/App.js .
@@ -108,7 +108,7 @@
 
 1. We only need to add lang as a custom attribute in the form field:
 
-    ``` <AmplifySignUp 
+         <AmplifySignUp 
             // Issue with auto populate and hidden: https://github.com/aws-amplify/amplify-js/issues/6168
             usernameAlias="email"
             headerText={I18n.get("signUpHeader")}
@@ -153,9 +153,9 @@
                 //For now we have to type in the string itself and cannot be hidden, Ampilfy team is working on this solution
                 required: true,
               },
-            ]}></AmplifySignUp>```
+            ]}></AmplifySignUp>
 
-1. Now click save and start your React app and it should have worked. You have succeful add internationaltion to your verfication email base on the langage selected by the toggle button.
+1. Now click save and start your React app and it should have worked. You have successful add internationalization to your verification email base on the language selected by the toggle button.
 
 ## How to create a login button/link and redirect from authenticated page when no JWT token provided
 ## How to create a logout link
