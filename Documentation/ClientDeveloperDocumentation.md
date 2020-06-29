@@ -97,13 +97,15 @@
    Go to the Cognitio`s service page and click Manage User Pools 
    Now click on the user pool we have just created from the name we gave it in ther pervious steps.
    Under General settings click on Attributes in the left menu bar.
-
+   ![](Images/Cognitio_submenu.png)
 
 1. Scroll all the way to the bottom and click add custom attribute.
    Enter `lang` under the Name and keep the other fields default, then click save changes.
+   ![](Images/Attribute.png)
 
 1. We now need to connect your frontend with your backend now by passing the lambda the lang attrubite data.
    Please open the file App.js that runs your react frontend. To get to this file it is localed in the rootproject/src/App.js .
+   ![](Images/App.png)
 
 
 1. We only need to add lang as a custom attribute in the form field:
