@@ -97,6 +97,7 @@
    Go to the Cognitio`s service page and click Manage User Pools 
    Now click on the user pool we have just created from the name we gave it in ther pervious steps.
    Under General settings click on Attributes in the left menu bar.
+
    ![](Images/Cognitio_submenu.png)
 
 1. Scroll all the way to the bottom and click add custom attribute.
@@ -158,6 +159,7 @@
             ]}></AmplifySignUp>
 
 1. Now click save and start your React app and it should have worked. You have successful add internationalization to your verification email base on the language selected by the toggle button.
+   ![](Images/Custom_message.png)
 
 ## How to create a login button/link and redirect from authenticated page when no JWT token provided
 ## How to create a logout link
