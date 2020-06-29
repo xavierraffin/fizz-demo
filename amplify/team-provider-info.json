@@ -79,5 +79,26 @@
                 "fizzauthCustomMessage": {}
             }
         }
+    },
+    "ampiden": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-fizz-ampiden-220731-authRole",
+            "UnauthRoleArn": "arn:aws:iam::111989064546:role/amplify-fizz-ampiden-220731-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::111989064546:role/amplify-fizz-ampiden-220731-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-fizz-ampiden-220731-deployment",
+            "UnauthRoleName": "amplify-fizz-ampiden-220731-unauthRole",
+            "StackName": "amplify-fizz-ampiden-220731",
+            "StackId": "arn:aws:cloudformation:us-west-2:111989064546:stack/amplify-fizz-ampiden-220731/45ee8e40-b8fd-11ea-8904-0ac711d65b04",
+            "AmplifyAppId": "d3nbdb5txrv7lr"
+        },
+        "categories": {
+            "function": {
+                "ampidenpoolCustomMessage": {}
+            },
+            "auth": {
+                "ampidenpool": {}
+            }
+        }
     }
 }

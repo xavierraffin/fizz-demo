@@ -1,6 +1,6 @@
 {
-    "resourceNameTruncated": "ampfizd9f35968",
-    "userPoolName": "ampfizzpool",
+    "resourceNameTruncated": "ampide6e5553d3",
+    "userPoolName": "ampidenpool",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -23,26 +23,22 @@
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-        "email",
-        "locale",
-        "phone_number"
+        "email"
     ],
     "userpoolClientReadAttributes": [
-        "email",
-        "locale",
-        "phone_number"
+        "email"
     ],
-    "userpoolClientLambdaRole": "ampfizd9f35968_userpoolclient_lambda_role",
-    "userpoolClientSetAttributes": true,
+    "userpoolClientLambdaRole": "ampide6e5553d3_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
     "useDefault": "manual",
     "authSelections": "userPoolOnly",
-    "resourceName": "ampfizzpool",
+    "resourceName": "ampidenpool",
     "usernameAttributes": [
-        "email"
+        "email, phone_number"
     ],
     "userPoolGroups": false,
     "adminQueries": false,
-    "triggers": "{}",
+    "triggers": "{\"CustomMessage\":[\"custom\"]}",
     "hostedUI": false,
     "userPoolGroupList": [],
     "authRoleArn": {
@@ -61,5 +57,15 @@
         "Ref": "AWS::StackId"
     },
     "permissions": [],
-    "dependsOn": []
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "ampidenpoolCustomMessage",
+            "triggerProvider": "Cognito",
+            "attributes": [
+                "Arn",
+                "Name"
+            ]
+        }
+    ]
 }
