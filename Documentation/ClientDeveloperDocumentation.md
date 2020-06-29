@@ -5,7 +5,8 @@
     In order to make this trigger succssful we need to make sure that we enable all 3 user attrubites and a custom addtrubie, which can only be set at the time of intial creatation. 
 
 1. Once the authentication api setup menu has appeared please follow the selection guide below:
-    ```kevnvo@a483e743386a fizz-demo % amplify add auth
+
+    ```your user@a483e743386a fizz-demo % amplify add auth
         Using service: Cognito, provided by: awscloudformation
         
         The current configured provider is Amazon Cognito. 
@@ -41,6 +42,7 @@
         ? Press enter to continue ```
 
 1. Once the your text editor has appeared please copy and paste this code into the lamada function:
+
         ```exports.handler = (event, context, callback) => {
             console.log(event);
             // Identify why was this function invoked
@@ -95,7 +97,7 @@
    Go to the Cognitio`s service page and click Manage User Pools 
    Now click on the user pool we have just created from the name we gave it in ther pervious steps.
    Under General settings click on Attributes in the left menu bar.
-   
+
 
 1. Scroll all the way to the bottom and click add custom attribute.
    Enter lang under the Name and keep the other fields default, then click save changes.
